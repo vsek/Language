@@ -1,0 +1,6 @@
+<setting>
+    <presenter>
+        <name>Language</name>
+        <resource>language</resource>
+    </presenter>
+</setting>
