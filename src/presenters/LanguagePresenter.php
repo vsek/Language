@@ -48,6 +48,8 @@ class LanguagePresenter extends BasePresenterM{
                 ->addRule(Form::FILLED, $this->translator->translate('admin.form.isRequired'));
         $form->addText('shortcut', $this->translator->translate('language.shortcut'))
                 ->addRule(Form::FILLED, $this->translator->translate('admin.form.isRequired'));
+        $form->addText('link', $this->translator->translate('language.link'))
+                ->addRule(Form::FILLED, $this->translator->translate('admin.form.isRequired'));
         
         $form->addSubmit('send', $this->translator->translate('admin.form.edit'));
         
@@ -56,6 +58,7 @@ class LanguagePresenter extends BasePresenterM{
         $form->setDefaults(array(
             'name' => $this->row->name,
             'shortcut' => $this->row->shortcut,
+            'link' => $this->row->link,
         ));
         
         return $form;
@@ -91,6 +94,8 @@ class LanguagePresenter extends BasePresenterM{
                 ->addRule(Form::FILLED, $this->translator->translate('admin.form.isRequired'));
         $form->addText('shortcut', $this->translator->translate('language.shortcut'))
                 ->addRule(Form::FILLED, $this->translator->translate('admin.form.isRequired'));
+        $form->addText('shortcut', $this->translator->translate('language.link'))
+                ->addRule(Form::FILLED, $this->translator->translate('admin.form.isRequired'));
         
         $form->addSubmit('send', $this->translator->translate('admin.form.create'));
         
@@ -105,6 +110,7 @@ class LanguagePresenter extends BasePresenterM{
         $grid->setModel($this->model->getAll());
         $grid->addColumn(new \App\Grid\Column\Column('name', $this->translator->translate('admin.form.name')));
         $grid->addColumn(new \App\Grid\Column\Column('shortcut', $this->translator->translate('language.shortcut')));
+        $grid->addColumn(new \App\Grid\Column\Column('link', $this->translator->translate('language.link')));
         $grid->addColumn(new \App\Grid\Column\Column('id', $this->translator->translate('admin.grid.id')));
         
         $grid->addMenu(new \App\Grid\Menu\Update('edit', $this->translator->translate('admin.form.edit')));
