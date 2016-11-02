@@ -1,5 +1,5 @@
 <ul class="submenu">
-    <li><a n:href="default">{_'language.summary'}</a></li>
-    <li><a n:href="new">{_'language.newLanguage'}</a></li>
+    <li><a n:href="default" n:class="$presenter->getAction() == 'default' ? active">{_'language.summary'}</a></li>
+    <li><a n:href="new" n:class="$presenter->getAction() == 'new' ? active">{_'language.newLanguage'}</a></li>
 </ul>
 <div class="clearfix"></div>
