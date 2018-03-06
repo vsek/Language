@@ -3,12 +3,12 @@
 namespace App\Model\Module;
 
 /**
- * Description of Language
+ * Description of Translate
  *
  * @author vsek
  */
-class Language extends \App\Model\BaseModel{
-    private $table = 'language';
+class Translate extends \App\Model\BaseModel{
+    private $table = 'translate';
     
     /**
      * Upravi data v databazi
