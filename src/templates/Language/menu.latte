@@ -1,0 +1,5 @@
+<ul class="submenu">
+    <li n:if="$user->isAllowed($presenter->getNameSimple(), 'default')"><a n:href="default" n:class="$presenter->getAction() == 'default' ? active">{_'language.summary'}</a></li>
+    <li n:if="$user->isAllowed($presenter->getNameSimple(), 'new')"><a n:href="new" n:class="$presenter->getAction() == 'new' ? active">{_'language.newLanguage'}</a></li>
+</ul>
+<div class="clearfix"></div>
